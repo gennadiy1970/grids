@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grids</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Модульная сетка</h1>
+        <div class="gallery">
+            <div class="img-box">
+                <h3>проблемы без использования сетки</h3>
+                <img src="./img/mod-grid3.gif" alt="" id="first">
+                <ol>
+                    <li>слишком много размеров</li>
+                    <li>повтор однотипного кода</li>
+                    <li>нет стандарта (сложно поддерживать)</li>
+                </ol>
+            </div>
+            <div class="img-box">
+                <h3>Принцип создания модульной горизонтальной сетки</h3>
+                <p>Фиксированное число колонок равной ширины и возможность задавать модулю ширину в виде произвольного числа
+                    колонок от 1 до максимального.</p>
+                <img src="./img/mod-grid0.jpg" alt="">
+                <h4>основные элементы модульной сетки</h4>
+                <ol class="horizontal">
+                    <li>container</li>
+                    <li>row</li>
+                    <li>column</li>
+                    <li>gutters</li>
+                </ol>
+            </div>
+            <div class="img-box">
+                <h3>Сколько колонок выбрать?</h3>
+                <img src="./img/mod-grid1.jpg" alt="">
+                <p>Можно создавать 2-x, 3-х, 4-х колоночные сетки, но это не универсальный подход.</p>
+            </div>
+            <div class="img-box">
+                <h3>Наиболее популярное решение - 12 колонок</h3>
+                <ul>
+                    <li>
+                        <code><kbd>12 / 1 = 12</kbd></code>
+                    </li>
+                    <li>
+                        <code><kbd>12 / 2 = 6</kbd></code>
+                    </li>
+                    <li>
+                        <code><kbd>12 / 3 = 4</kbd></code>
+                    </li>
+                    <li>
+                        <code><kbd>12 / 4 = 3</kbd></code>
+                    </li>
+                    <li>
+                        <code><kbd>12 / 6 = 2</kbd></code>
+                    </li>
+                    <li>
+                        <code><kbd>12 /12 = 1</kbd></code>
+                    </li>
+                </ul>
+                <img src="./img/mod-grid2.png" alt="">
+            </div>
+        </div>
+        <h2>Технологии создания модульной сетки</h2>
+        <div class="gallery">
+            <div class="img-box">
+                <h3>Собственный class для каждой ширины</h3>
+                <table>
+                    <h4>классы для 12 колонок</h4>
+                    <tr>
+                        <th>ширина в колонках</th>
+                        <th>имя класса</th>
+                        <th>max классов в row</th>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>col-12</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>col-11</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>col-10</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>col-9</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>col-8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>col-7</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>col-6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>col-5</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>col-4</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>col-3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>col-2</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>col-1</td>
+                        <td>12</td>
+                    </tr>
+                </table>
+                <p data-height="265" data-theme-id="0" data-slug-hash="NBwevm" data-default-tab="css,result" data-user="Gorbulin" data-pen-title="css modules grid  combination 1 - 12" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/NBwevm/">css modules grid  combination 1 - 12</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h3>float-left</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="vaeOBo" data-default-tab="html,result" data-user="Gorbulin" data-pen-title="css modules grid float-left"
+                    class="codepen">See the Pen
+                    <a href="https://codepen.io/Gorbulin/pen/vaeOBo/">css modules grid float-left</a> by Gennadiy (
+                    <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4>Достоинства</h4>
+                <ul>
+                    <li>поддержка старыми браузерами</li>
+                    <li>много работающего кода, требующего поддержки</li>
+                    <li>bootstap-3 как стандарт индустрии в прошлом</li>
+                </ul>
+                <h4>Недостатки</h4>
+                <ul>
+                    <li>сложности с равной высотой колонок</li>
+                    <li>карьера с морально старыми проектами </li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <h3>inline-block</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="Epwjwr" data-default-tab="html,result" data-user="Gorbulin" data-pen-title="css modules grid display: inline-block"
+                    class="codepen">See the Pen
+                    <a href="https://codepen.io/Gorbulin/pen/Epwjwr/">css modules grid display: inline-block</a> by Gennadiy (
+                    <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4>Достоинства</h4>
+                <ul>
+                    <li>поддержка старыми браузерами</li>
+                </ul>
+                <h4>Недостатки</h4>
+                <ul>
+                    <li>сложности с равной высотой колонок</li>
+                    <li>сложности в вертикальным выравниваем</li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <h3>display: table</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="bjYrbQ" data-default-tab="html,result" data-user="Gorbulin" data-pen-title="css modules grid display: table"
+                    class="codepen">See the Pen
+                    <a href="https://codepen.io/Gorbulin/pen/bjYrbQ/">css modules grid display: table</a> by Gennadiy (
+                    <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4>Достоинства</h4>
+                <ul>
+                    <li>поддержка старыми браузерами</li>
+                    <li>лояльность поисковых механизмов
+                        <span class="comment">// в отличие от html тегов table в качестве разметки</span>
+                    </li>
+                    <li>колонки равной высоты</li>
+                </ul>
+                <h4>Недостатки</h4>
+                <ul>
+                    <li>специфические CSS правила для таблиц</li>
+                    <li>необходимость вертикального выравнивания</li>
+                    <li>на практике используется крайне редко</li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <h3>flex</h3>
+                <p data-height="265" data-theme-id="0" data-slug-hash="bjYrYy" data-default-tab="html,result" data-user="Gorbulin" data-pen-title="css modules grid display: flex"
+                    class="codepen">See the Pen
+                    <a href="https://codepen.io/Gorbulin/pen/bjYrYy/">css modules grid display: flex</a> by Gennadiy (
+                    <a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on
+                    <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4>Достоинства</h4>
+                <ul>
+                    <li>колонки равной высоты</li>
+                    <li>много работающего кода, требующего поддержки</li>
+                    <li>bootstap-4 как стандарт индустрии в настоящем</li>
+                    <li>карьера с современными проектами</li>
+                </ul>
+                <h4>Недостатки</h4>
+                <ul>
+                    <li>в ближайшее время должен уступить технологии grid</li>
+                    <li>плохая поддержка старых браузеров</li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <h3>Брейкпоинты</h3>
+                <h4>Медиаправила и новые имена классов для колонок</h4>
+                <p data-height="265" data-theme-id="0" data-slug-hash="QBOzJW" data-default-tab="css,result" data-user="Gorbulin" data-pen-title="css modules grid  responsive" class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/QBOzJW/">css modules grid  responsive</a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4>bootstrap-4</h4>
+                <img src="./img/mod-grid4.png" alt="">
+                <ul>
+                    <li>
+                        <pre><kbd>col-:    &lt; 576px</kbd></pre>
+                    </li>
+                    <li>
+                        <pre><kbd>col-sm-: &ge; 576рх</kbd></pre>
+                    </li>
+                    <li>
+                        <pre><kbd>col-md-: &ge; 768рх</kbd></pre>
+                    </li>
+                    <li>
+                        <pre><kbd>col-lg-: &ge; 992рх</kbd></pre>
+                    </li>
+                    <li>
+                        <pre><kbd>col-xl-: &ge; 1200рх</kbd></pre>
+                    </li>
+                </ul>
+                <h4>Верстка на bootstrap-4</h4>
+                <p data-height="265" data-theme-id="0" data-slug-hash="jpaLXb" data-default-tab="html,result" data-user="Gorbulin" data-pen-title="css modules bootsrap grid " class="codepen">See the Pen <a href="https://codepen.io/Gorbulin/pen/jpaLXb/">css modules bootsrap grid </a> by Gennadiy (<a href="https://codepen.io/Gorbulin">@Gorbulin</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <p><a href="http://bootstrap-4.ru/docs/4.0/layout/grid/">Документация на русском к bootstrap-4</a></p>
+                <h4>Практические примеры верстки на </h4>
+                <p>Верстка макетов на <a href="#first">первом изображении</a> <a href="https://codepen.io/collection/XEmxaY/#">перейти к задачам</a></p>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
